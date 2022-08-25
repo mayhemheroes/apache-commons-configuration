@@ -1,0 +1,8 @@
+project: PROJECT
+target: INIConfigurationReadFuzzer
+cmds:
+- cmd: /out/jazzer_driver --agent_path=/out/jazzer_agent_deploy.jar --cp=/out/commons-configuration.jar::/out --target_class=INIConfigurationReadFuzzer --jvm_args="-Xmx2048m:-Djava.awt.headless=true"
+  env:
+    LD_LIBRARY_PATH: '"/usr/lib/jvm/java-15-openjdk-amd64/lib/server":/out'
+  timeout: 50
+  libfuzzer: true
