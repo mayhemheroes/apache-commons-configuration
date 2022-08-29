@@ -23,7 +23,7 @@ ENV MVN $SRC/maven/apache-maven-3.6.3/bin/mvn
 
 # Clone the commons-configuration library source code
 COPY . commons-configuration
-RUN rm -rf commons-configuration/mayhem
+RUN rm -rf commons-configuration/mayhem commons-configuration/.github
 
 # Get the dictionaries
 RUN git clone --depth=1 "https://github.com/google/fuzzing" fuzzing
